@@ -1,0 +1,97 @@
+using System;
+using System.Linq;
+using System.Text;
+using System.Collections.Generic;
+using System.Reflection;
+using UnityEngine;
+using RimWorld;
+using Verse;
+
+namespace WitcherTrials
+{
+    [DefOf]
+    public static class HediffDefOf
+    {
+        public static HediffDef WitcherTrials_Hediff_Grasses;
+        public static HediffDef WitcherTrials_Hediff_Dreams;
+        public static HediffDef WitcherTrials_Hediff_Elders;
+    }
+
+    public class WitcherUtilities
+    {
+        public static void HediffCleanup(Pawn pawn)
+        {
+            //This gets the 'Hediff' of the 'HediffDef's listed.
+            Hediff hediffGrasses = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.WitcherTrials_Hediff_Grasses);
+            Hediff hediffDreams = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.WitcherTrials_Hediff_Dreams);
+            Hediff hediffElders = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.WitcherTrials_Hediff_Elders);
+
+            //If the pawn has the 'Hediff' Remove it.
+            if (hediffGrasses != null)
+                pawn.health.RemoveHediff(hediffGrasses);
+            if (hediffDreams != null)
+                pawn.health.RemoveHediff(hediffDreams);
+            if (hediffElders != null)
+                pawn.health.RemoveHediff(hediffElders);
+        }
+    }
+
+    public class WitcherProgression : Recipe_Surgery
+    {
+        public override void ApplyOnPawn(Pawn pawn, BodyPartRecord part, Pawn billDoer, List<Thing> ingredients, Bill bill)
+        {
+            if (pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.WitcherTrials_Hediff_Grasses) == null &&
+                pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.WitcherTrials_Hediff_Dreams) == null &&
+                pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.WitcherTrials_Hediff_Elders) == null)
+            {
+                if (billDoer != null)
+                    if (CheckSurgeryFail(billDoer, pawn, ingredients, part, bill))
+                    {
+                        return;
+                    }
+                WitcherUtilities.HediffCleanup(pawn);
+                //if null, upgrade to 'Grasses'.
+                pawn.health.AddHediff(HediffDefOf.WitcherTrials_Hediff_Grasses, part, null, null);
+                Messages.Message(new Message(pawn.Name.ToStringShort + " null -> Grasses", MessageTypeDefOf.PositiveEvent), true);
+                return;
+            }
+            if (pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.WitcherTrials_Hediff_Grasses) != null)
+            {
+                if (billDoer != null)
+                    if (CheckSurgeryFail(billDoer, pawn, ingredients, part, bill))
+                    {
+                        return;
+                    }
+                WitcherUtilities.HediffCleanup(pawn);
+                //if 'Grasses', upgrade to 'Dreams'.
+                pawn.health.AddHediff(HediffDefOf.WitcherTrials_Hediff_Dreams, part, null, null);
+                Messages.Message(new Message(pawn.Name.ToStringShort + " Grasses -> Dreams", MessageTypeDefOf.PositiveEvent), true);
+                return;
+            }
+            if (pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.WitcherTrials_Hediff_Dreams) != null)
+            {
+                if (billDoer != null)
+                    if (CheckSurgeryFail(billDoer, pawn, ingredients, part, bill))
+                    {
+                        return;
+                    }
+                WitcherUtilities.HediffCleanup(pawn);
+                //if 'Dreams', upgrade to 'Elders'.
+                pawn.health.AddHediff(HediffDefOf.WitcherTrials_Hediff_Elders, part, null, null);
+                //Recolor pawns hair white. "Your a witcher harry"
+                pawn.story.hairColor = Color.white;
+                
+                Messages.Message(new Message(pawn.Name.ToStringShort + " Dreams -> Elders", MessageTypeDefOf.PositiveEvent), true);
+                return;
+            }
+            if (pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.WitcherTrials_Hediff_Elders) != null)
+            {
+                //no more operations for you!
+                Messages.Message(new Message("No more trials.", MessageTypeDefOf.PositiveEvent), true);
+                return;
+            }
+        }
+    }
+}
+
+//Messages.Message(new Message("Message String", MessageTypeDefOf.PositiveEvent), true);

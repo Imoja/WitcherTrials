@@ -1,0 +1,45 @@
+<!--
+
+workerclass = WitcherTrials.RecipeWorker_Color
+
+
+Basic : grow
+Haygrass : 19.52
+Healroot : 11.82
+Psychoid : 16.36
+Hop : 9.09
+Devilstrand : 38.86
+Smokeleaf : 13.64
+
+Complex : Harvested : Location
+Agarilux : Raw Fungus : Caves
+Agave : Agave Fruit : Arid Biomes
+Astragalus : : Alpine Biomes
+Glowstool : : Caves
+Ambrosia Bush : Ambrosia : Ambrosia sprout (event)
+
+Manufactured : 
+Psychite Tea (pekoe) : 4 psychoid leaves
+
+
+
+Stage 1
+psychite tea : 5
+devilstrand : 5
+
+Stage 2
+Psychite Tea : 
+Agarilux
+2 eyes?
+
+Stage 3 : Hard AF
+Ambrosia : 1
+Psychite Tea : 2
+Go-Juice : 3
+Flake : 5
+Wake-up : 2
+Yayo : 2
+Luciferium : 1
+Neutroamine : 1
+
+-->

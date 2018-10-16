@@ -1,0 +1,5 @@
+C:\Steam\steamapps\common\RimWorld\Mods\WitcherTrials\Assemblies\WitcherTrials.dll
+C:\Steam\steamapps\common\RimWorld\Mods\WitcherTrials\Source\WitcherTrials\WitcherTrials\obj\Debug\WitcherTrials.csprojAssemblyReference.cache
+C:\Steam\steamapps\common\RimWorld\Mods\WitcherTrials\Source\WitcherTrials\WitcherTrials\obj\Debug\WitcherTrials.csproj.CoreCompileInputs.cache
+C:\Steam\steamapps\common\RimWorld\Mods\WitcherTrials\Source\WitcherTrials\WitcherTrials\obj\Debug\WitcherTrials.dll
+C:\Steam\steamapps\common\RimWorld\Mods\WitcherTrials\Source\WitcherTrials\WitcherTrials\obj\Debug\WitcherTrials.csproj.CopyComplete

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ResearchProjectDef>
+		<defName>WitcherTrials</defName>
+		<label>The Witcher Trials</label>
+		<description>Unlocks the ancient trials of the witchers</description>
+		<baseCost>10000</baseCost>
+		<techLevel>Neolithic</techLevel>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>TrialoftheGrasses</defName>
+		<label>Trial of the Grasses</label>
+		<description>Performs the first stage of the trials.</description>
+		<baseCost>1000</baseCost>
+		<techLevel>Neolithic</techLevel>
+		<prerequisites>
+			<li>WitcherTrials</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>TrialoftheDreams</defName>
+		<label>Trial of the Dreams</label>
+		<description>Performs the second stage of the trials.</description>
+		<baseCost>2500</baseCost>
+		<techLevel>Neolithic</techLevel>
+		<prerequisites>
+			<li>TrialoftheGrasses</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>TrialoftheElders</defName>
+		<label>Trial of the Elders</label>
+		<description>Performs the third stage of the trials.</description>
+		<baseCost>5000</baseCost>
+		<techLevel>Neolithic</techLevel>
+		<prerequisites>
+			<li>TrialoftheDreams</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+</Defs>
