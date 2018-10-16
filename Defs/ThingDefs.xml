@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="MakeableDrugBase">
+		<defName>WitcherTrials_Brew_Grasses</defName>
+		<label>Brew of the Grasses</label>
+		<description>Brew to activate the Grasses</description>
+		<graphicData>
+			<texPath>Brews/WitcherBrew_Grasses</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<rotatable>false</rotatable>
+		<statBases>
+			<WorkToMake>1000</WorkToMake>
+			<MarketValue>1</MarketValue>
+			<Mass>0.05</Mass>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<ingestible>
+			<foodType>Plant, Processed</foodType>
+		</ingestible>
+		<recipeMaker>
+			<researchPrerequisite>TrialoftheGrasses</researchPrerequisite>
+			<recipeUsers>
+				<li>Campfire</li>
+				<li>ElectricStove</li>
+				<li>FueledStove</li>
+			</recipeUsers>
+			<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+			<workSkill>Cooking</workSkill>
+			<skillRequirements>
+				<Cooking>2</Cooking>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Plant_Psychoid>5</Plant_Psychoid>
+			<Plant_Devilstrand>5</Plant_Devilstrand>
+		</costList>
+	</ThingDef>
+	
+	<ThingDef ParentName="MakeableDrugBase">
+		<defName>WitcherTrials_Brew_Dreams</defName>
+		<label>Brew of the Dreams</label>
+		<description>Brew to activate the Dreams</description>
+		<graphicData>
+			<texPath>Brews/WitcherBrew_Dreams</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<rotatable>false</rotatable>
+		<statBases>
+			<WorkToMake>1000</WorkToMake>
+			<MarketValue>1</MarketValue>
+			<Mass>0.05</Mass>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Flammability>1.3</Flammability>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<ingestible>
+			<foodType>Plant, Processed</foodType>
+		</ingestible>
+		<recipeMaker>
+			<researchPrerequisite>TrialoftheDreams</researchPrerequisite>
+			<recipeUsers>
+				<li>CraftingSpot</li>
+				<li>DrugLab</li>
+			</recipeUsers>
+			<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+			<workSkill>Cooking</workSkill>
+			<skillRequirements>
+				<Cooking>5</Cooking>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Plant_Psychoid>5</Plant_Psychoid>
+			<Plant_Devilstrand>5</Plant_Devilstrand>
+		</costList>
+	</ThingDef>
+	
+	<ThingDef ParentName="MakeableDrugBase">
+		<defName>WitcherTrials_Brew_Elders</defName>
+		<label>Brew of the Elders</label>
+		<description>Brew to activate the Elders</description>
+		<graphicData>
+			<texPath>Brews/WitcherBrew_Elders</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<rotatable>false</rotatable>
+		<statBases>
+			<WorkToMake>1000</WorkToMake>
+			<MarketValue>1</MarketValue>
+			<Mass>0.05</Mass>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Flammability>1.3</Flammability>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<ingestible>
+			<foodType>Plant, Processed</foodType>
+		</ingestible>
+		<recipeMaker>
+			<researchPrerequisite>TrialoftheElders</researchPrerequisite>
+			<recipeUsers>
+				<li>CraftingSpot</li>
+				<li>DrugLab</li>
+			</recipeUsers>
+			<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+			<workSkill>Cooking</workSkill>
+			<skillRequirements>
+				<Cooking>10</Cooking>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Plant_Psychoid>5</Plant_Psychoid>
+			<Plant_Devilstrand>5</Plant_Devilstrand>
+		</costList>
+	</ThingDef>
+    
+</Defs>
