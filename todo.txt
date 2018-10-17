@@ -1,11 +1,9 @@
 <!--
-
-operations have to be performed in sequence
-
-operations cannot be removed. (currently operation can be removed by performing the same operation again)
-
-true infertility
-
-more complex recipes
-
+true infertility (birbs n bees?)
+signs
+monsters
+armors
+decoctions
+elixiers
+etc
 -->
