@@ -20,15 +20,15 @@
 		<workerClass>WitcherTrials.RecipeSurgery_Grasses</workerClass> <!-- worker class -->
 		<researchPrerequisite>TrialoftheGrasses</researchPrerequisite>
 		<!-- Details -->
-		<workAmount>10</workAmount> <!--3000 time action takes -->
-		<surgerySuccessChanceFactor>999</surgerySuccessChanceFactor> <!--0.3 chance of success -->
-		<deathOnFailedSurgeryChance>0</deathOnFailedSurgeryChance> <!--0.3 chance of death on failure -->
+		<workAmount>3000</workAmount> <!--3000 time action takes -->
+		<surgerySuccessChanceFactor>0.5</surgerySuccessChanceFactor> <!--0.3 chance of success -->
+		<deathOnFailedSurgeryChance>0.3</deathOnFailedSurgeryChance> <!--0.3 chance of death on failure -->
 		<!-- Ingredients -->
 		<ingredients>
 			<li>
 				<filter>
 					<thingDefs>
-						<li>MedicineHerbal</li>
+						<li>WitcherTrials_Brew_Grasses</li>
 					</thingDefs>
 				</filter>
 				<count>1</count>
@@ -47,15 +47,15 @@
 		<workerClass>WitcherTrials.RecipeSurgery_Dreams</workerClass> <!-- worker class -->
 		<researchPrerequisite>TrialoftheDreams</researchPrerequisite>
 		<!-- Details -->
-		<workAmount>10</workAmount> <!--4500 time action takes -->
-		<surgerySuccessChanceFactor>999</surgerySuccessChanceFactor> <!--0.3 chance of success -->
+		<workAmount>4500</workAmount> <!--4500 time action takes -->
+		<surgerySuccessChanceFactor>0.4</surgerySuccessChanceFactor> <!--0.3 chance of success -->
 		<deathOnFailedSurgeryChance>0</deathOnFailedSurgeryChance> <!--0.6 chance of death on failure -->
 		<!-- Ingredients -->
 		<ingredients>
 			<li>
 				<filter>
 					<thingDefs>
-						<li>MedicineHerbal</li>
+						<li>WitcherTrials_Brew_Dreams</li>
 					</thingDefs>
 				</filter>
 				<count>1</count>
@@ -74,15 +74,15 @@
 		<workerClass>WitcherTrials.RecipeSurgery_Elders</workerClass> <!-- worker class -->
 		<researchPrerequisite>TrialoftheElders</researchPrerequisite>
 		<!-- Details -->
-		<workAmount>10</workAmount> <!--6000 time action takes -->
-		<surgerySuccessChanceFactor>9</surgerySuccessChanceFactor> <!-- chance of success -->
+		<workAmount>6000</workAmount> <!--6000 time action takes -->
+		<surgerySuccessChanceFactor>0.3</surgerySuccessChanceFactor> <!-- chance of success -->
 		<deathOnFailedSurgeryChance>0</deathOnFailedSurgeryChance> <!-- chance of death on failure -->
 		<!-- Ingredients -->
 		<ingredients>
 			<li>
 				<filter>
 					<thingDefs>
-						<li>MedicineHerbal</li>
+						<li>WitcherTrials_Brew_Elders</li>
 					</thingDefs>
 				</filter>
 				<count>1</count>

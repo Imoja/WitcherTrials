@@ -36,8 +36,8 @@ namespace WitcherTrials
     [StaticConstructorOnStartup]
     public static class HarmonyPatches
     {
-        // erdelfs Transpiler <3
-        public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
+        // erdelfs Transpiler <3 (for hiding operations)
+        public static IEnumerable<CodeInstruction> Transpiler1(IEnumerable<CodeInstruction> instructions)
         {
             FieldInfo defInfo = AccessTools.Field(type: typeof(Thing), name: nameof(Thing.def));
 
@@ -58,8 +58,8 @@ namespace WitcherTrials
         {
             HarmonyInstance harmony = HarmonyInstance.Create("Rimworld.imoja.witchertrials");
 
-            // erdlefs harmony.Patch (for Transpiler) <3
-            harmony.Patch(original: typeof(HealthCardUtility).GetNestedTypes(bindingAttr: AccessTools.all).First(predicate: t => t.GetMethods(bindingAttr: AccessTools.all).Any(predicate: mi => mi.ReturnType == typeof(List<FloatMenuOption>))).GetMethods(bindingAttr: AccessTools.all).First(predicate: mi => mi.ReturnType == typeof(List<FloatMenuOption>)), prefix: null, postfix: null, transpiler: new HarmonyMethod(type: typeof(WitcherTrials.HarmonyPatches), name: nameof(Transpiler)));
+            // erdlefs harmony.Patch (for Transpiler) <3 (for hiding operations)
+            harmony.Patch(original: typeof(HealthCardUtility).GetNestedTypes(bindingAttr: AccessTools.all).First(predicate: t => t.GetMethods(bindingAttr: AccessTools.all).Any(predicate: mi => mi.ReturnType == typeof(List<FloatMenuOption>))).GetMethods(bindingAttr: AccessTools.all).First(predicate: mi => mi.ReturnType == typeof(List<FloatMenuOption>)), prefix: null, postfix: null, transpiler: new HarmonyMethod(type: typeof(WitcherTrials.HarmonyPatches), name: nameof(Transpiler1)));
         }
 
         // erdelf's CreateRecipes <3
